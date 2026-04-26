@@ -34,6 +34,8 @@ KNOWN_CUTOFF   = "30.04.2026"
 client = Anthropic(api_key=ANTHROPIC_KEY)
 
 
+# NOTE: Portal scraping is blocked by Cloudflare bot detection.
+# Gmail IMAP monitoring is the active alert mechanism instead.
 async def scrape_idata() -> tuple[str, bytes]:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
