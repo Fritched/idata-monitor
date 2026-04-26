@@ -1,0 +1,6 @@
+.env
+session.json
+*.png
+nohup.out
+monitor.log
+.env.save
